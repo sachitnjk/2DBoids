@@ -24,7 +24,7 @@ public class FlockAgent : MonoBehaviour
 		//transform.forward for 3D
 		transform.up = velocity;
 		transform.position += (Vector3)velocity * Time.deltaTime;
-		//actually mpove the agent to the position to move
+		//actually move the agent to the position to move
 	}
 
 }
