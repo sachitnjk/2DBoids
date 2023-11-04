@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class FlockAgent : MonoBehaviour
 {
+	Flock agentFlock;
+	public Flock AgentFlock { get { return agentFlock; } }
 
 	Collider2D agentCollider;
 
@@ -25,6 +27,11 @@ public class FlockAgent : MonoBehaviour
 		transform.up = velocity;
 		transform.position += (Vector3)velocity * Time.deltaTime;
 		//actually move the agent to the position to move
+	}
+
+	public void Initialize(Flock flock)
+	{
+		agentFlock = flock;
 	}
 
 }
